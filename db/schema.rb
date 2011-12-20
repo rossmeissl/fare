@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111220002012) do
+ActiveRecord::Schema.define(:version => 20111220032136) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(:version => 20111220002012) do
     t.boolean  "review"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "flickr_url"
+    t.string   "photo_url"
   end
 
 end

@@ -1,0 +1,13 @@
+<% @title = 'Posts' %>
+<article>
+  <h1>Listing posts</h1>
+<% if @posts.empty? %>
+  <p>No posts found.</p>
+<% else %>
+  <ul>
+  <% @posts.each do |post| %>
+    <li><%= post.title %> <%= link_to 'View', post_path(post) %> <%= link_to 'Edit', edit_post_path(post) %> <%= link_to 'Delete', post, :method => :delete, :confirm_with => 'Are you sure you want to delete this post?' %>
+  <% end %>
+  </ul>
+<% end %>
+</article>

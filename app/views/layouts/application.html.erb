@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fare</title>
-  <%= stylesheet_link_tag :all %>
+  <title><%= title_for @title %></title>
+  <%= stylesheet_link_tag 'application' %>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Montserrat|Istok+Web:400,400italic,700' %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
+<header>
+  <h1>Capital Fare</h1>
+</header>
+<section id="main">
+<aside id="sidebar">
+  <h2><span><strong>Exploring the restaurants of Downtown Madison, Wisconsin</strong> with occasional trips to the suburbs and beyond</span></h2>
+  <%= form_for Search.new do |f| %>
+    <%= f.text_field :query, :class => 'text' %>
+    <%= submit_tag 'Search', :class => 'submit' %>
+  <% end %>
+</aside>
 <%= yield %>
-
+</section>
+<%= yield :bottom %>
 </body>
 </html>

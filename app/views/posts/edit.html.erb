@@ -1,0 +1,5 @@
+<% @title = 'Editing post: ' + @post.title %>
+<article>
+  <h1>Editing post: <%= @post.title %></h1>
+  <%= render :partial => 'form', :locals => { :post => @post } %>
+</article>

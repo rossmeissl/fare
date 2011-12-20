@@ -1,0 +1,17 @@
+<article class="post">
+  <hgroup>
+    <h1><%= post.title %></h1>
+    <h2><%= post.updated_at.to_s :post %></h2>
+  </hgroup>
+<% if post.photo_url.present? %>
+  <section class="photo">
+  <p><%= image_tag post.photo_url, :alt => "Photo of restaurant" %></p>
+  </section>
+<% end %>
+  <section class="main content">
+  <%=markdown post.content %>
+  </section>
+  <section class="extended content">
+  <%=markdown post.extended_content %>
+  </section>
+</article>

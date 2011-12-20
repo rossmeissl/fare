@@ -1,0 +1,161 @@
+body, h1, h2, h3, h4, h5, h6, ul, ol, dl, p {
+  margin: 0;
+  padding: 0;
+}
+
+body, input, textarea {
+  font-family: 'Istok Web', sans-serif;
+}
+
+header {
+  position: relative;
+  background: url(images/header.jpg) repeat-x;
+}
+
+header h1 {
+  background: url(images/logo.png) no-repeat center center;
+  text-indent: -9999px;
+  height: 140px;
+  -moz-box-shadow: 0 15px 15px rgba(0,0,0,0.07);
+  border: 1px solid #E5BFAA;
+}
+
+header span {
+  width: 960px;
+  display: block;
+  margin: 0 auto;
+}
+
+section#main {
+  width: 960px;
+  margin: 0 auto;
+  padding: 30px 0 0;
+}
+
+section#main h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+form dl {
+  overflow: auto;
+}
+
+form dl dt, form dl dd {
+  float: left;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+form dl dt {
+  width: 140px;
+  clear: left;
+  margin-right: 20px;
+}
+
+form dl dt.boolean label {
+  display: none;
+}
+
+form dl dt p {
+  color: gray;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 1.1em;
+}
+
+form dl dd {
+  width: 480px;
+  clear: right;
+}
+
+form dl dd input[type=text], form dl dd textarea {
+  width: 480px;
+  font-size: 14px;
+}
+
+form dl dd input[type=checkbox] {
+  margin: 0;
+}
+
+form p.submit {
+  margin: 0 0 0 160px;
+}
+
+form p.submit input {
+  font-size: 18px;
+}
+
+ul.posts {
+  list-style: none;
+  width: 640px;
+}
+
+section#main article.post h1 {
+  font-size: 24px;
+  text-shadow: 1px 1px 0 white, 2px 2px 0 silver;
+  margin-bottom: 5px;
+}
+
+section#main article.post h2 {
+  font-size: 13px;
+  font-weight: normal;
+  color: gray;
+  margin: 0 0 10px;
+}
+
+article.post section.content {
+  font-size: 16px;
+}
+
+article.post section.content p {
+  margin: 0 0 14px;
+}
+
+.post .photo {
+  margin: 0 0 10px;
+}
+
+ul.posts .extended {
+  display: none;
+}
+
+aside#sidebar {
+  width: 280px;
+  min-height: 300px;
+  float: right;
+  color: #a05f62;
+}
+
+aside#sidebar h2 {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0 0 20px;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 20px;
+}
+
+aside#sidebar h2 strong {
+  font-weight: normal;
+  display: block;
+  font-style: italic;
+  font-size: 17px;
+}
+
+aside#sidebar form input {
+  font-size: 17px;
+}
+
+aside#sidebar form input.text {
+  width: 196px;
+}
+
+aside#sidebar form input.submit {
+  padding: 0;
+  width: 74px;
+}
+
+
