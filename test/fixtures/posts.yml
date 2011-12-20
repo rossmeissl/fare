@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  content: MyText
+  extended_content: MyText
+  address: MyString
+  lat: 1.5
+  long: 1.5
+  review: false
+
+two:
+  title: MyString
+  content: MyText
+  extended_content: MyText
+  address: MyString
+  lat: 1.5
+  long: 1.5
+  review: false
