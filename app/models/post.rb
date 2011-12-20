@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  extend Searchable(:content, :extended_content, :title)
+#  extend Searchable(:content, :extended_content, :title)
   before_save :set_photo_url
 
   private
