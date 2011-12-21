@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     if session[:authenticated]
       true
     else
-      redirect_to :controller => :sessions, :action => :new
+      redirect_to :controller => :user_sessions, :action => :new
     end
   end
 end
