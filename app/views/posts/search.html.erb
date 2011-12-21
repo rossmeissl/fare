@@ -1,0 +1,5 @@
+<h1 class="results">Posts matching "<%= @query %>"</h1>
+
+<ul class="posts">
+<%= render :partial => 'posts/li', :collection => @posts, :as => :post %>
+</ul>

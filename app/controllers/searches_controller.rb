@@ -1,6 +1,7 @@
 class SearchesController < ApplicationController
   def create
-    @posts = Post.search params[:search][:query]
-    render :controller => :posts, :action => :search
+    @query = params[:search][:query]
+    @posts = Post.search @query
+    render 'posts/search'
   end
 end

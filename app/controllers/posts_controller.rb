@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   before_filter :assemble_posts, :only => [:index, :list]
+  before_filter :find_post, :only => [:edit, :show]
 
   def index
   end
@@ -24,7 +25,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find params[:id]
+  end
+
+  def show
   end
 
   def update
@@ -47,9 +50,19 @@ class PostsController < ApplicationController
     redirect_to :action => :list
   end
 
+  def map
+    @posts = Post.where(:review => true).to_gmaps4rails do |post, marker|
+      marker.infowindow render_to_string(:partial => "/posts/map_info", :locals => { :post => post}).gsub(/\n/, '').gsub(/"/, '\"')
+    end
+  end
+
   private
 
   def assemble_posts
     @posts = Post.all
+  end
+
+  def find_post
+    @post = Post.find params[:id]
   end
 end

@@ -15,15 +15,14 @@ header {
 header h1 {
   background: url(images/logo.png) no-repeat center center;
   text-indent: -9999px;
-  height: 140px;
   -moz-box-shadow: 0 15px 15px rgba(0,0,0,0.07);
   border: 1px solid #E5BFAA;
+  height: 140px;
 }
 
-header span {
-  width: 960px;
+header h1 a {
+  height: 140px;
   display: block;
-  margin: 0 auto;
 }
 
 section#main {
@@ -36,8 +35,24 @@ section#main h1 {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 24px;
+  text-shadow: 1px 1px 0 white, 2px 2px 0 silver;
   margin: 0 0 10px;
+}
+
+section#main h1.results {
+  font-size: 18px;
+  color: gray;
+}
+
+section#main h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section#main h1 a:hover {
+  color: #06e;
+  text-decoration: underline;
 }
 
 form dl {
@@ -91,12 +106,13 @@ form p.submit input {
 
 ul.posts {
   list-style: none;
+}
+
+article.post {
   width: 640px;
 }
 
 section#main article.post h1 {
-  font-size: 24px;
-  text-shadow: 1px 1px 0 white, 2px 2px 0 silver;
   margin-bottom: 5px;
 }
 
@@ -109,6 +125,7 @@ section#main article.post h2 {
 
 article.post section.content {
   font-size: 16px;
+  line-height: 1.4;
 }
 
 article.post section.content p {
@@ -116,7 +133,15 @@ article.post section.content p {
 }
 
 .post .photo {
-  margin: 0 0 10px;
+  margin: 0 0 20px;
+}
+
+article.post p.jump {
+  display: none;
+}
+
+ul.posts article.post p.jump {
+  display: block;
 }
 
 ul.posts .extended {
@@ -128,6 +153,10 @@ aside#sidebar {
   min-height: 300px;
   float: right;
   color: #a05f62;
+}
+
+aside#sidebar a {
+  color: inherit;
 }
 
 aside#sidebar h2 {
@@ -145,6 +174,12 @@ aside#sidebar h2 strong {
   font-size: 17px;
 }
 
+aside#sidebar form {
+  padding: 0 0 20px;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 20px;
+}
+
 aside#sidebar form input {
   font-size: 17px;
 }
@@ -158,4 +193,26 @@ aside#sidebar form input.submit {
   width: 74px;
 }
 
+aside#sidebar p#map, aside#sidebar p#authors {
+  font-style: italic;
+  font-size: 18px;
+}
 
+aside#sidebar p#map {
+  padding: 0 0 20px;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 20px;
+}
+
+aside#sidebar p#map a {
+  display: block;
+  padding: 210px 0 0;
+  background: url(images/map.png) no-repeat;
+}
+
+aside#sidebar p#authors {
+  padding: 200px 0 20px;
+  background: url(images/authors.jpg) no-repeat;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 20px;
+}

@@ -1,6 +1,6 @@
 <article class="post">
   <hgroup>
-    <h1><%= post.title %></h1>
+    <h1><%= link_to post.title, post %></h1>
     <h2><%= post.updated_at.to_s :post %></h2>
   </hgroup>
 <% if post.photo_url.present? %>
@@ -11,6 +11,9 @@
   <section class="main content">
   <%=markdown post.content %>
   </section>
+  
+  <p class="jump"><%= link_to 'Continue reading →', post %></p>
+  
   <section class="extended content">
   <%=markdown post.extended_content %>
   </section>

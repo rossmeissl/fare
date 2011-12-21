@@ -1,5 +1,11 @@
+require 'texticle/searchable'
+
 class Post < ActiveRecord::Base
+  extend Searchable(:title, :content, :extended_content)
+
   before_save :set_photo_url
+
+  acts_as_gmappable :lat => 'lat', :lng => 'long', :address => 'address', :check_process => false
 
   private
 

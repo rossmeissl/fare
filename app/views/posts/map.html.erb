@@ -1,0 +1,16 @@
+<% @skip_sidebar = true %>
+<%= 
+gmaps({
+    "map_options" => {
+      "center_latitude" => 43.08257296912899,
+      "center_longitude" => -89.38056180444333,
+      "zoom" => 13,
+      "mapTypeControl" => false,
+      "auto_adjust" => false,
+      "auto_zoom" => false
+    },
+    "markers" => {
+      "data" => @posts
+    }
+})
+%>
