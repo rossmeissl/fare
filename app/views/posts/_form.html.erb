@@ -1,23 +1,41 @@
+<% @skip_sidebar = true %>
+
+<% content_for :head do %>
+  <%= javascript_include_tag :ckeditor %>
+<% end %>
+
 <%= form_for post do |f| %>
     <dl>
       <dt><%= f.label :title %></dt>
-      <dd><%= f.text_field :title %></dd>
+      <dd>
+        <%= f.text_field :title %>
+        <p>When reviewing a specific restuarant, this should probably include the name of the place</p>
+      </dd>
       <dt class="boolean"><%= f.label :review, 'Review?' %></dt>
-      <dd><%= f.check_box :review %> <%= f.label :review, 'Is this post about a specific restaurant?' %></dd>
+      <dd>
+        <span class="control"><%= f.check_box :review %> <%= f.label :review, 'Is this post about a specific restaurant?' %></span>
+        <p>Posts about specific restaurants will appear on the <%= link_to 'map', map_posts_path %></p>
+      </dd>
       <dt class="address"><%= f.label :address, 'Restaurant address' %></dt>
-      <dd class="address"><%= f.text_field :address %></dd>
+      <dd class="address">
+        <%= f.text_field :address %>
+        <p>Use an address that Google Maps will understand, e.g. "1842 Rutledge St, Madison WI"</p>
+      </dd>
       <dt><%= f.label :flickr_url, 'Flickr photo URL' %></dt>
-      <dd><%= f.text_field :flickr_url %></dd>
+      <dd>
+        <%= f.text_field :flickr_url %>
+        <p>You should upload your photo to the <kbd>capitalfare</kbd> Flickr account first. This URL will look like <kbd>http://www.flickr.com/photos/capitalfare/123456789/in/photostream</kbd> or similar. The photo <strong>must</strong> be in the <kbd>capitalfare</kbd> Flickr account to work</p>
+      </dd>
       <dt>
         <%= f.label :content, 'Main content' %>
         <p>This text will appear on the homepage and in post listings</p>
       </dt>
-      <dd><%= f.text_area :content %></dd>
+      <dd><%= f.cktext_area :content %></dd>
       <dt>
         <%= f.label :extended_content, 'Extended content' %>
         <p>This will only appear when you click "Read More" to view the whole post</p>
       </dt>
-      <dd><%= f.text_area :extended_content %></dd>
+      <dd><%= f.cktext_area :extended_content %></dd>
     </dl>
     <p class="submit"><%= submit_tag post.new_record? ? 'Post' : 'Save' %></p>
 <% end %>

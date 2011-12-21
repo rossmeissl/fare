@@ -14,6 +14,12 @@
   <h1><%= link_to_unless_current 'Capital Fare', root_path %></h1>
 </header>
 <section id="main">
+<% if flash[:notice] %>
+  <p class="flash notice"><%= flash[:notice] %></p>
+<% end %>
+<% if flash[:error] %>
+  <p class="flash error"><%= flash[:error] %></p>
+<% end %>
 <% unless @skip_sidebar %>
   <aside id="sidebar">
   <% if @authenticated %>
@@ -30,6 +36,8 @@
 <% end %>
 <%= yield %>
 </section>
+<footer>
+</footer>
 <%= yield :scripts %>
 <%= yield :bottom %>
 </body>

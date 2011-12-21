@@ -1,4 +1,4 @@
-<% @title = 'Log in' %>
+<% @title = 'Log in'; @skip_sidebar = true %>
 <article>
   <h1>Please log in</h1>
   <%= form_for @session, :url => user_sessions_path do |f| %>

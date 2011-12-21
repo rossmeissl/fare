@@ -62,13 +62,14 @@ form dl {
 form dl dt, form dl dd {
   float: left;
   margin: 0 0 10px;
-  padding: 0;
+  padding: 10px 0 0;
+  border-top: 1px solid #ddd;
 }
 
 form dl dt {
   width: 140px;
   clear: left;
-  margin-right: 20px;
+  padding-right: 20px;
 }
 
 form dl dt.boolean label {
@@ -83,17 +84,31 @@ form dl dt p {
 }
 
 form dl dd {
-  width: 480px;
+  width: 800px;
   clear: right;
+  overflow: auto;
+  padding-bottom: 5px;
 }
 
-form dl dd input[type=text], form dl dd textarea {
-  width: 480px;
+form dl dd input[type=text], form dl dd textarea, form dl dd .control {
+  width: 476px;
   font-size: 14px;
+  float: left;
 }
 
 form dl dd input[type=checkbox] {
   margin: 0;
+}
+
+form dl dd label {
+  font-size: 18px;
+}
+
+form dl dd p {
+  width: 280px;
+  margin: 0 0 5px 520px;
+  color: #a05f62;
+  font-style: italic;
 }
 
 form p.submit {
@@ -106,6 +121,10 @@ form p.submit input {
 
 ul.posts {
   list-style: none;
+}
+
+ul.posts li {
+  margin: 0 0 40px;
 }
 
 article.post {
@@ -129,6 +148,25 @@ article.post section.content {
 }
 
 article.post section.content p {
+  margin: 0 0 14px;
+}
+
+article.post section.content ul {
+  list-style: square;
+}
+
+article.post section.content ul, article.post section.content ol {
+  padding: 0 0 0 1em;
+  margin: 0 0 14px;
+}
+
+article.post section.content li {
+  margin: 0 0 5px;
+}
+
+article.post section.content blockquote {
+  border-left: 1px solid #ddd;
+  padding: 0 0 0 1em;
   margin: 0 0 14px;
 }
 
@@ -212,7 +250,7 @@ aside#sidebar p#map {
 
 aside#sidebar p#map a {
   display: block;
-  padding: 210px 0 0;
+  padding: 79px 0 0;
   background: url(images/map.png) no-repeat;
 }
 
@@ -221,4 +259,30 @@ aside#sidebar p#authors {
   background: url(images/authors.jpg) no-repeat;
   border-bottom: 1px solid #ddd;
   margin: 0 0 20px;
+}
+
+#main .flash {
+  font-size: 16px;
+  line-height: 28px;
+  height: 28px;
+  text-align: center;
+  color: white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 640px;
+  float: left;
+  margin: 0 0 30px;
+}
+
+#main .info {
+  background: gray;
+}
+
+#main .error {
+  background: red;
+}
+
+footer {
+  min-height: 30px;
 }

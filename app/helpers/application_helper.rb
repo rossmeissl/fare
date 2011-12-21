@@ -8,8 +8,4 @@ module ApplicationHelper
       "Capital Fare — Madison, Wisconsin restaurant reviews and food news"
     end
   end
-
-  def markdown(md)
-    Maruku.new(md).to_html.html_safe
-  end
 end
