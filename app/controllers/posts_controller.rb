@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
 
-  before_filter :assemble_posts, :only => [:index, :list]
   before_filter :find_post, :only => [:edit, :show]
 
   def index
+    @posts = Post.paginate :page => params[:page]
   end
 
   def new
@@ -22,6 +22,7 @@ class PostsController < ApplicationController
   end
 
   def list
+    @posts = Post.all
   end
 
   def edit
@@ -57,10 +58,6 @@ class PostsController < ApplicationController
   end
 
   private
-
-  def assemble_posts
-    @posts = Post.all
-  end
 
   def find_post
     @post = Post.find params[:id]

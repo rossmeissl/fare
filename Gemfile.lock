@@ -84,6 +84,7 @@ GEM
       kgio (~> 2.4)
       rack
       raindrops (~> 0.6)
+    will_paginate (3.0.2)
 
 PLATFORMS
   ruby
@@ -97,3 +98,4 @@ DEPENDENCIES
   sqlite3
   texticle (~> 2.0)
   unicorn
+  will_paginate (~> 3.0)
