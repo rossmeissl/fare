@@ -16,6 +16,9 @@
 <section id="main">
 <% unless @skip_sidebar %>
   <aside id="sidebar">
+  <% if @authenticated %>
+  <p class="admin"><%= link_to 'New post', new_post_path %> &middot; <%= link_to_unless_current 'List posts', list_posts_path %> &middot; <%= link_to 'Log out', new_user_session_path %></p>
+  <% end %>
     <h2><span><strong>Exploring the restaurants of Downtown Madison, Wisconsin</strong> with occasional trips to the suburbs and beyond</span></h2>
     <%= form_for Search.new do |f| %>
       <%= f.text_field :query, :class => 'text' %>

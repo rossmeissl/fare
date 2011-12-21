@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   before_filter :find_post, :only => [:edit, :show]
+  before_filter :authenticate, :except => [:index, :show, :map]
 
   def index
     @posts = Post.paginate :page => params[:page]
